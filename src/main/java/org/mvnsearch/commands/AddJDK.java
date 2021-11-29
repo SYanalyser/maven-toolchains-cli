@@ -75,7 +75,7 @@ public class AddJDK implements Callable<Integer>, BaseCommand {
 
 
     private int installFromLocal() {
-        File javaBin = new File(javaHome, "bin/java");
+        File javaBin = new File(javaHome, "bin/java.exe");
         if (javaBin.exists()) {
             toolchainService.addToolChain(version, vendor, javaHome);
             System.out.println("Succeed to add JDK " + version + " in toolchains.xml");
